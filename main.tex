@@ -1,0 +1,219 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cies Resume/CV
+% LaTeX Template
+% Version 1.1 (20/7/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Cies Breijs (cies@kde.nl)
+% https://github.com/cies/resume with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper]{article} % Font size (10-12pt) and paper size (a4paper, letterpaper, legalpaper, etc)
+
+\include{structure} % Include structure.tex which contains packages and document layout definitions
+
+\renewcommand{\thefootnote}{\roman{footnote}}
+
+\hyphenation{Some-long-word} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+\begin{document} 
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\maintitle{Paco Juan Quirós}{GAME PROGRAMMER RESUME}
+
+\noindent\href{mailto:pacojuanquiros@gmail.com}{pacojuanquiros@gmail.com}\bull % Your email address
+\textsmaller{+}34 660 97 50 09\bull \href{http://www.github.com/pacojq}{pacojq} \textit{(GitHub)}\bull % Your phone number(s) and Skype username
+\href{http://pacojq.github.io}{pacojq.github.io} \\ % Your URL
+Oviedo, Asturias\bull Spain \bull \textit{As it was in June 2020}% Your address
+
+\spacedhrule{0.9em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SUMMARY SECTION
+%----------------------------------------------------------------------------------------
+
+%\roottitle{Objective} % Root section title
+
+%\vspace{-1.3em} % Reduce whitespace after the Summary heading and the two-column content
+
+%\begin{multicols}{2}  % Start a two-column layout
+%\noindent \textit{A summary of your interests, achievements, history, topic of study or any other short summary of your professional life.}\\\\
+%Software engineer with experience on performance-critical systems, seeking positions on core game technology teams.
+%\end{multicols}
+
+%\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Experience} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{https://meteorbytestudios.com}{Meteorbyte Studios}}
+{\textsc{Oviedo, Asturias, Spain}} {
+
+\headedsubsection % Job title entry for the current employer
+{Senior Programmer}
+{Aug '19 -- Present}
+{\bodytext{
+Game: \textit{Attrah}\footnote{Project selected by the Spanish Government's Ministry of Culture as one of the best cultural projects of 2019.} - In development.
+\begin{itemize}
+\item{
+Procedural world generation using Voronoi maps, with world sizes ranging from 2.36 km\textsuperscript{2} to 12.85 km\textsuperscript{2}. This includes vegetation, geography and meteorology data, all optimized to use less than 2 GB of memory after mesh construction -tested on PC and PS4- and saving to disk with a budget of 1 MB/km\textsuperscript{2}. }
+\item{
+Transforming a flat world to give it a \textit{round planet} look via vertex manipulation. Vertices displaced with a HLSL shader, running in real-time at 60 Hz.}
+\item{
+Used \href{https://buildbot.net}{Buildbot} to develop an internal Continuous Integration tool, which would automate the build process for PC and PS4 after major changes in Version Control.}
+\item{
+Developed a C\# library for visual profiling which allows spotting CPU bottlenecks with no extra cost on performance. Data visualization using Google Chrome's \textit{Tracing} tool. Code on \href{https://github.com/pacojq/ChromeTracing.NET}{GitHub}.}
+\end{itemize}
+}}
+
+\headedsubsection % Job title entry for the current employer
+{Junior Programmer}
+{Aug '18 -- Aug '19}
+{\bodytext{
+Game: \href{https://store.steampowered.com/app/878420/Woodpunk/}{\textit{Woodpunk}} - 2018.
+\begin{itemize}
+\item{
+Refactored the already-existing save files, settings, leaderboards and stats systems -highly coupled to the Steam API- to work in a multi-platform environment\footnote{Release of ports to PS4 and Xbox One on hold for administrative reasons.}. Modular design featuring the implementation of Play Station 4 and Xbox One APIs, also giving support to future platforms -such as the Nintendo Switch.}
+\end{itemize}
+}}
+
+}
+
+%------------------------------------------------
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{https://store.steampowered.com/dev/bipolardawn}{Bipolar Dawn}}
+{\textsc{Avilés, Asturias, Spain}} {
+
+\headedsubsection % Job title entry for the current employer
+{Owner}
+{Nov '16 -- Present}
+{\bodytext{
+Game: \textit{World Star Soccer '91} - In development.
+\begin{itemize}
+\item{
+Extended Unity's render pipeline with a pass that allows recording TV-style replays with secondary cameras. Outputs files with a maximum budget of 8 MB, so they can be shared in Discord.}
+\end{itemize}
+}}
+
+}
+
+%------------------------------------------------
+
+\begin{center}
+\textit{Please refer to \href{https://www.linkedin.com/in/paco-juan-6589ba14b/}{my Linkedin profile} for the complete list of work experiences.}
+\end{center}
+
+%------------------------------------------------
+
+\spacedhrule{-0.2em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Personal Projects} % Top level section
+
+{
+
+\headedsubsection % Job title entry for the current employer
+{\href{https://github.com/pacojq/Xaloc}{Xaloc Engine}}
+{Spring 2020 -- Present}
+{\bodytext{
+In-development 2D engine written in C++, with C\# scripting using mono.
+}}
+
+%------------------------------------------------
+
+\headedsubsection % Job title entry for the current employer
+{\href{https://github.com/pacojq/Seagull}{Seagull}}
+{Spring 2019}
+{\bodytext{
+Toy programming language, compiling to intermediate language. Targeting \textit{MAPL Virtual Machine}, an academic virtual machine built at University of Oviedo.
+}}
+
+}
+
+%------------------------------------------------
+
+\begin{center}
+\textit{Please refer to \href{https://github.com/pacojq}{my GitHub account} and my \href{http://pacojq.github.io}{personal webpage} for the complete list of personal projects and research.}
+\end{center}
+
+%------------------------------------------------
+
+\spacedhrule{-0.2em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Education} % Top level section
+
+\headedsection % Employer name which can include a hyperlink and location/URL on the right side of the page
+{\href{http://www.uniovi.es/en/inicio}{University of Oviedo}}
+{\textsc{Oviedo, Spain}} {
+
+\headedsubsection % Job title entry for the current employer
+{Bachelor degree in Software Engineering}
+{(Expected) Sep '16 -- July '20}
+{\bodytext{
+Bilingual degree: 50\% English / 50\% Spanish.
+}}
+
+}
+
+\spacedhrule{0.5em}{-0.4em} % Horizontal rule - the first bracket is whitespace before and the second is after
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\roottitle{Skills} % Top level section
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Languages:}
+{C\#, C++, Java, C, HLSL, Python, Scheme, GLSL.}
+
+%------------------------------------------------
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Game development:}
+{PlayStation 4 SDK, Xbox One SDK, OpenGL, Vulkan, Unity, Mono.}
+
+%------------------------------------------------
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Other tools:}
+{Visual Studio, Eclipse, JetBrains Rider, RenderDoc, Buildbot, Git, ANTLR, Amazon AWS.}
+
+%------------------------------------------------
+
+\inlineheadsection % Special section that has an inline header with a 'hanging' paragraph
+{Natural languages:}
+{Catalan \textit{(native)}, Spanish \textit{(native)}, English \textit{(bilingual)} and French \textit{(elementary)}.}
+
+%------------------------------------------------
+
+\end{document}
